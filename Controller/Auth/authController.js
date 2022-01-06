@@ -41,12 +41,17 @@ module.exports = {
     loginWithGoogle: async (req,res) => {
         try {
             const {access_token} = req.body;
+            if(!access_token){
+                return res.status(401).json({message:'Access Token is required'});
+            }
             const ticket = await client.verifyIdToken({
                 idToken: access_token,
                 requiredAudience: process.env.CLIENT_ID
             });
+            
             const { email } = ticket.getPayload();        
-            let user = await User.findOne({'email':email});        
+            let user = await User.findOne({'email':email});
+            //If user not found on DB then add user and send the token
             if(!user){
                 user = await User({email}).save();            
             }
@@ -62,7 +67,8 @@ module.exports = {
             });
             
         } catch (error) {
-            console.log(error);            
+            console.log(error);
+            return res.status(403).json({message:'Invalid token'});            
         }        
     }
 }
