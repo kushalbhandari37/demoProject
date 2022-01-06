@@ -1,4 +1,4 @@
-# ZohoCrmApi
+# Demo
 
 ## Project Setup Guidelines
 
@@ -6,7 +6,7 @@
 2.  Run: npm install
 3.  Create .env file and copy .env.example and add necessary values
 
-In the project directory, you can run:
+In order to start the project, you can run:
 
 ### `npm start`
 
