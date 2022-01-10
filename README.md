@@ -10,4 +10,12 @@ In order to start the project, you can run:
 
 ### `npm start`
 
+## Testing
+
+Jest is used for testing.
+
+In order to run test, you can run:
+
+### `npm test`
+
 Starts the server
