@@ -11,7 +11,7 @@ describe('Registration Test',() => {
     it('Registers the user',()=>{
         cy.request({
             method: 'POST',
-            url:'http://localhost:3000/api/v1/register',
+            url:`${Cypress.env('base_url')}/api/v1/register`,
             body: {
                 'email': 'test@gmail.com',
                 'password': '123456'
@@ -27,7 +27,7 @@ describe('Login Test',() => {
     it('Logs in the user',()=>{
         cy.request({
             method: 'POST',
-            url:'http://localhost:3000/api/v1/login',
+            url:`${Cypress.env('base_url')}/api/v1/login`,
             body: {
                 'email': 'test@gmail.com',
                 'password': '123456'
