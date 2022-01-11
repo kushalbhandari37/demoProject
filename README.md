@@ -18,4 +18,8 @@ In order to run test, you can run:
 
 ### `npm test`
 
+For Cypress test, run:
+
+### `npm run cypress-test`
+
 Starts the server
