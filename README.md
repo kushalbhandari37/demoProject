@@ -9,6 +9,7 @@
 In order to start the project, you can run:
 
 ### `npm start`
+Starts the server
 
 ## Testing
 
@@ -22,4 +23,3 @@ For Cypress test, run:
 
 ### `npm run cypress-test`
 
-Starts the server
